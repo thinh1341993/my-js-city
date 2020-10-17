@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./home.css">
+
+</head>
+
+<body class="body">
+    <h1 class="h1">
+        MY-JS-CITY
+    </h1>
+
+    <!-- screen new game id: create,newGame, loadGame-->
+    <div id="create" class="formNewGame">
+        <div style="display: flex;">
+            <button id="newGame" class="button" style="margin-top: 50px;">New Game</button>
+        </div>
+        <div style="display: flex;">
+            <button id="loadGame" class="button" style="margin-bottom: 50px;">Load Game</button>
+        </div>
+    </div>
+
+    <!-- screen create character id:form, name, warning, createCharacter,character1,character2,character3,character4 -->
+    <div id="createCharacter" class="formCreateCharacter" style="display: none;">
+        <div class="formCharacter">
+            <div id="character1" class="character">
+                <img src="./c1.png" alt="" style="width:100px">
+            </div>
+            <div id="character2" class="character">
+
+                <img src="./c2.png" alt="" style="width:100px">
+
+            </div>
+            <div id="character3" class="character">
+
+                <img src="./c3.png" alt="" style="width:100px">
+
+            </div>
+            <div id="character4" class="character">
+
+                <img src="./c4.png" alt="" style="width:100px">
+
+            </div>
+        </div>
+
+        <div class="inputCharacter">
+            
+            <div  class="formInputName" action="">
+                <button style="margin-right: 40px;" id="backHome1" class="submit button">
+                    Quay Lại</button>
+                    <form id='form'>
+                <label class="nameCharacter" for="fname">Tên nhân vật:</label>
+                <input class="Inputname" type="text" id="name" name="name">
+                <input class="submit button" type="submit" value="Tạo">
+            </form>
+            </div>
+            <div id='warning' class="warning"></div>
+        </div>
+    </div>
+
+    <!-- screen load character id:loadCharacter, character1,-->
+    <div id="loadCharacter" class="loadCharacter" style="display: none;">
+        <div id="listCharacter"  class="formCharacter">
+            
+        </div>
+
+        <div class="infor" >
+            <button style="margin-top: 20px;" id="backHome" class="button">
+                Quay Lại</button>
+        </div>
+    </div>
+
+    <!-- screen active character -->
+    <div id="activeCharacter" class="loadCharacter" style="display: none;">
+        <div id="choiceCharacter"  class="formCharacter">
+            
+        </div>
+
+        <div style="margin-bottom: 25px; margin-top: 25px; display: flex; flex-direction: row;justify-content: center; align-items: center;" >
+            <div >
+                <button id="backoadCharacter" class="active button">Quay Lại</button>
+            </div>
+            <div >
+                <button class="active button">Vào Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./home.js"></script>
+</body>
+
+</html>
