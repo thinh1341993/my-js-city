@@ -33,6 +33,7 @@ let character = [{
 let active = ''
 
 newGame.addEventListener('click', () => {
+
     create.style.display = 'none'
     createCharacter.style.display = 'flex'
 })
