@@ -150,7 +150,8 @@ form.onsubmit = function (event) {
             character.push({
                 name: this.name.value,
                 completed: [],
-                cimage: `./c${active}.png`
+                cimage: `./c${active}.png`,
+                avatar:`./c-${active}.png`
             })
         }
         console.log(character)
