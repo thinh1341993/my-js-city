@@ -19,7 +19,7 @@
         <div id="newGame" class="buttonImage " style="display: flex;">
             New Game
         </div>
-        <div id="loadGame"  class="buttonImage "  style="display: flex;">
+        <div id="loadGame" class="buttonImage " style="display: flex;">
             Load Game
         </div>
     </div>
@@ -48,15 +48,20 @@
         </div>
 
         <div class="inputCharacter">
-            
-            <div  class="formInputName" action="">
-                <button style="margin-right: 40px; " id="backHome1" class="submit button">
-                    Quay Lại</button>
-                    <form id='form'>
-                <label class="nameCharacter" for="fname">Tên nhân vật:</label>
-                <input class="Inputname" type="text" id="name" name="name">
-                <input class="submit button" type="submit" value="Tạo">
-            </form>
+
+            <div class="formInputName" action="">
+                <div style="padding-left: 40px; padding-bottom: 10px;
+                background-image: url('back.png'); " id="backHome1" class=" button">
+                    Quay Lại</div>
+                <form style="height: 70px;width: 650px;justify-content: space-around;" class="formInputName" id='form'>
+                    <label class="nameCharacter" for="fname">Tên nhân vật:</label>
+                    <input class="Inputname" type="text" id="name" name="name">
+                    <div style="background-image: url('enter.png');
+                    font-size: 20px; outline: none;" class="button">
+                    <input class="submit" style="
+                    " type="submit" value="Enter">
+                    </div>
+                </form>
             </div>
             <div id='warning' class="warning"></div>
         </div>
@@ -64,27 +69,29 @@
 
     <!-- screen load character id:loadCharacter, character1,-->
     <div id="loadCharacter" class="loadCharacter" style="display: none;">
-        <div id="listCharacter"  class="formCharacter">
-            
+        <div id="listCharacter" class="formCharacter">
+
         </div>
 
-        <div class="infor" >
-            <button style="margin-top: 20px;" id="backHome" class="button">
-                Quay Lại</button>
+        <div class="infor">
+                <div style="padding-left: 40px; padding-bottom: 10px;
+                background-image: url('back.png'); " id="backHome" class=" button">
+                    Quay Lại</div>
         </div>
     </div>
 
     <!-- screen active character -->
     <div id="activeCharacter" class="loadCharacter" style="display: none;">
-        <div id="choiceCharacter"  class="formCharacter">
-            
+        <div id="choiceCharacter" class="formCharacter">
+
         </div>
 
-        <div style="margin-bottom: 25px; margin-top: 25px; display: flex; flex-direction: row;justify-content: center; align-items: center;" >
-            <div >
+        <div
+            style="margin-bottom: 25px; margin-top: 25px; display: flex; flex-direction: row;justify-content: center; align-items: center;">
+            <div>
                 <button id="backoadCharacter" class="active button">Quay Lại</button>
             </div>
-            <div >
+            <div>
                 <button class="active button">Vào Game</button>
             </div>
         </div>
