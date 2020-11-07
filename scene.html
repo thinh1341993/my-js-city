@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="scenecode">
+        <div id="codecontent">
+          <div id="codequestion"></div>
+          <div id="alert"></div>
+
+          <div id="submithint">
+            <button class="hint-submit" id="hint">Hint</button>
+            <button class="hint-submit" id="submit">Submit</button>
+          </div>
+        </div>
+        <div id="moreinfor">Tutorials :??????????</div>
+      </div>
+
+      <div id="scenescreen">
+        <div id="npc"></div>
+        <img src="c1.png" alt="x" height="30%" id="cpos" />
+        <!-- <div id="divanswer1"></div> -->
+        <!-- <div id="divanswer2"></div> -->
+      </div>
+      <div class="footer">
+        <div class="btn-area">
+          <a href="#"
+            ><img src="./back-to-login.png" alt="" class="btn" id="back-to-login"
+          /></a>
+          <a href="#"
+            ><img src="./soundon.png" alt="" class="btn" id="sound"
+          /></a>
+          <a href="#"><img src="./help.png" alt="" class="btn" id="help" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="progress">
+      <p>Tiến trình</p>
+      <p><span id="scene-completed">5</span>/7</p>
+    </div>
+
+    <div class="user-info">
+      <img src="./c-1.png" alt="" id="user-avatar" />
+      <p id="user-name">user's name</p>
+    </div>
+
+    
+
+    <!-- <div id="next">Next</div> -->
+    <div id="help-board">
+      <h3 class="help-title">Mục tiêu</h3>
+      <p class="help-text">
+          Hoàn thành tất cả các thử thách trong những địa điểm trên bản đồ.
+      </p>
+      <h3 class="help-title">Giải thích cách chơi</h3>
+      <p class="help-text">
+          Có tất cả 7 địa điểm trên bản đồ, người chơi có thể chọn ngẫu nhiên một địa điểm để tham gia thử thách. Mỗi địa điểm sẽ có trung bình khoảng 5-6 câu hỏi. Người chơi trả lời câu hỏi bằng cách điền vào chỗ trống trong khung lớn bên trái để hoàn thành đoạn code theo yêu cầu.
+      </p>
+      <img src="./close.png" alt="" class="btn" id="help-close">
+  </div>
+    <audio src="./soundtrack.wav" id="soundtrack"></audio>
+    <audio src="./click.mp3" id="click-sound"></audio>
+    <script type="module" src="data.js"></script>
+    <script type="module" src="scene.js"></script>
+  </body>
+</html>

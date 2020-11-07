@@ -1,0 +1,837 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Maven Pro", sans-serif;
+  text-align: center;
+}
+
+/* body {
+    font-family: 'Maven Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* body {
+  display: flex;
+  position: relative;
+} */
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.progress,
+.user-info {
+  position: absolute;
+  margin: 2vh 1vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20%;
+  height: 10%;
+  background: url(./tittle.png) center/cover no-repeat;
+  font-size: 4vh;
+}
+
+.progress {
+  left: 0;
+  top: 0;
+}
+
+.user-info {
+  right: 0;
+  top: 0;
+}
+
+#user-avatar {
+  width: 30%;
+  border-radius: 100%;
+}
+
+.footer {
+  position: absolute;
+  width: 20%;
+  height: 10%;
+  margin-bottom: 1vh;
+  margin-left: 2vw;
+  left: 0;
+  bottom: 0;
+}
+
+.btn-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.btn {
+  width: 5vw;
+  height: 5vw;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+#scenescreen {
+  width: 60%;
+  height: 100vh;
+  /* background-image: url("school1.jpg"); */
+  background-repeat: no-repeat;
+  background-size: 60vw 100vh;
+  position: relative;
+}
+
+#scenecode {
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: start;
+  font-size: 3vh;
+  /* background-color: #F4F7BE; */
+  background: url(./code-bg.png) center/cover no-repeat;
+}
+
+#next {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10%;
+  height: 10%;
+}
+
+#codecontent {
+  height: 56%;
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  background: url(./question-board.png) center/contain no-repeat;
+  /* background-color: rgba(250, 235, 215, 0.7); */
+  margin-top: 2vh;
+  /* padding: 10%; */
+}
+
+#moreinfor {
+  height: 9%;
+  width: 88%;
+  word-wrap: break-word;
+  margin-top: 4vh;
+  text-align: center;
+  background-color: rgba(250, 235, 215, 0.6);
+  border-radius: 3vh;
+}
+
+#codequestion {
+  height: 90%;
+  padding: 3% 9%;
+  margin-top: 3vh;
+  line-height: 1.4;
+  color: antiquewhite;
+  /* color: black */
+}
+
+.hint-submit {
+  border: none;
+  background: url(./tittle.png) center/cover no-repeat;
+  width: 30%;
+  height: 100%;
+  font-size: 3vh;
+  font-family: "Maven Pro", sans-serif;
+  margin-top: 3vh;
+}
+
+.hint-submit:hover {
+  transform: scale(1.1);
+  transition: 0.2s ease-in-out;
+}
+
+#alert {
+  width: 100%;
+  height: 12%;
+  text-align: center;
+}
+
+button:focus,
+input:focus {
+  border: none;
+  outline: none;
+}
+
+#submithint {
+  display: flex;
+  height: 20%;
+  justify-content: space-evenly;
+}
+
+input {
+  width: 22%;
+  height: 9%;
+  font-size: 3vh;
+  border: none;
+  background: #d4eaeb;
+  border-radius: 1vh;
+  padding-left: 1vw;
+}
+
+#cpos {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+}
+
+#divanswer1 {
+  position: absolute;
+
+  width: 30%;
+  height: 10%;
+  background-color: burlywood;
+  border: 1vh solid rgba(255, 0, 0, 0.692);
+  border-radius: 5vh;
+  line-height: 10vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 30%;
+  left: 35%;
+  visibility: hidden;
+}
+
+#divanswer2 {
+  position: absolute;
+
+  width: 10%;
+  height: 10%;
+  background-color: burlywood;
+  border: 1vh solid rgba(255, 0, 0, 0.692);
+  border-radius: 5vh;
+  line-height: 10vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 50%;
+  visibility: hidden;
+}
+
+#divanswer3 {
+  position: absolute;
+  width: 8%;
+  height: 8%;
+  background-color: burlywood;
+  border: 1vh solid rgba(255, 0, 0, 0.692);
+  border-radius: 5vh;
+  line-height: 8vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 23%;
+  visibility: hidden;
+}
+
+#divanswer4 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 30%;
+  height: 10%;
+  line-height: 6vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+}
+
+#divanswer5 {
+  position: absolute;
+  width: 25%;
+  height: 8%;
+  background-color: burlywood;
+  border: 1vh solid rgba(255, 0, 0, 0.692);
+  border-radius: 5vh;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 80%;
+  left: 13%;
+  visibility: hidden;
+}
+
+#divanswer6 {
+  position: absolute;
+  width: 20%;
+  height: 10%;
+  background-color: rgb(135, 176, 222);
+  border: 1vh solid blue;
+  border-radius: 5vh;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 45%;
+  left: 40%;
+  visibility: hidden;
+}
+
+#divanswer7 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 30%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 4vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+
+#npc {
+  position: absolute;
+  background-image: url("dialog-r.png");
+  background-size: 100% 100%;
+  width: 70%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 30%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 5%;
+}
+
+#divanswer8 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer9 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer10 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+
+#divanswer11 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+
+#divanswer12 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+
+#divanswer13 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+
+#divanswer14 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer15 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer16 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 4vh;
+}
+#divanswer17 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer18 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 4vh;
+}
+#divanswer19 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 4vh;
+}
+#divanswer20 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 4vh;
+}
+#divanswer21 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer22 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer23 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 4vh;
+}
+#divanswer24 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer25 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 4vh;
+}
+#divanswer26 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer27 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer28 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer29 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 4vh;
+}
+#divanswer30 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer31 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 4vh;
+}
+#divanswer32 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 4vh;
+}
+#divanswer33 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 4vh;
+}
+#divanswer34 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 4vh;
+}
+#divanswer35 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer36 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer37 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 12vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+}
+#divanswer38 {
+  position: absolute;
+  background-image: url("dialog.png");
+  background-size: 100% 100%;
+  width: 40%;
+  height: 20%;
+  line-height: 4vh;
+  font-size: 3vh;
+  font-style: oblique;
+  top: 50%;
+  left: 30%;
+  visibility: hidden;
+  font-weight: bolder;
+  padding-top: 4vh;
+}
+#teacher {
+  position: absolute;
+  width: 40%;
+  right: -5%;
+  top: 45%;
+}
+
+#friend {
+  position: absolute;
+  width: 15%;
+  right: 0%;
+  top: 50%;
+}
+
+#oldman {
+  position: absolute;
+  width: 30%;
+  right: 0%;
+  top: 55%;
+}
+
+#oldwomen {
+  position: absolute;
+  width: 27%;
+  right: 0%;
+  top: 55%;
+}
+
+#fruit {
+  position: absolute;
+  width: 20%;
+  right: 0%;
+  top: 55%;
+}
+
+#parkman {
+  position: absolute;
+  width: 20%;
+  right: 0%;
+  top: 55%;
+}
+
+#help-board {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(./login-board.png) center/contain no-repeat;
+  height: 70vh;
+  width: 70vw;
+  padding: 5vh;
+  left: 15%;
+  top: 15%;
+  display: none;
+  justify-content: space-evenly;
+}
+
+.help-title {
+  font-size: 3vh;
+  /* margin: 5px 0; */
+}
+
+.help-text {
+  font-size: 3vh;
+  /* margin: 10px; */
+  width: 60%;
+}
+
+#help-close {
+  width: 6vw;
+  /* margin-top: 10px; */
+}
